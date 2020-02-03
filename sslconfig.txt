@@ -1,0 +1,21 @@
+[req]
+default_bits           = 2048
+prompt                 = no
+default_md             = sha384
+distinguished_name     = req_distinguished_name
+
+[req_distinguished_name]
+countryName            = SG
+stateOrProvinceName    = Singapore
+organizationName       = OBS
+organizationalUnitName = OAB
+commonName             = <snip-fqdn>
+emailAddress           = <snip-email>
+
+[req_ext]
+subjectAltName         = @alt_names
+
+[alt_names]
+DNS.1                  = <snip-fqdn1>
+DNS.2                  = <snip-fqdn2>
+IP.1                   = 57.100.100.135
